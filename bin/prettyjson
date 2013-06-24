@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+import json
+import sys
+import traceback
+
+line_num = 0
+for line in sys.stdin:
+    try:
+        index = min(
+            line.index('['),
+            line.index('{'))
+        data = json.loads(line[index:])
+        print json.dumps(data, indent=4)
+    except:
+        print >> sys.stderr, "Error on line %d" % line_num
+        traceback.print_exc()
+    line_num += 1

@@ -1,0 +1,11 @@
+[user]
+	name = Sam Yatchmenoff
+	email = syatchmenoff@janrain.com
+[alias]
+    graph = log --graph --all --oneline --color --date-order --format=\"%C(yellow)%h%C(cyan)%d %C(red)%cn %Creset%s\"
+[push]
+	default = current
+[color]
+	ui = true
+[core]
+    editor = vim
